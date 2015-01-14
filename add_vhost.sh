@@ -41,7 +41,7 @@ tput sgr0
 read doc_root
 done
 
-log_file="/Applications/MAMP/logs/$doc_root.log"
+log_file="/Applications/MAMP/logs/$url.log"
 doc_root="/Applications/MAMP/htdocs/$doc_root"
 
 # check the document root exists
@@ -63,7 +63,7 @@ else
 fi
 
 # create the vhost in vhost.conf
-echo "" >> vhost_conf
+echo "" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "<VirtualHost *>" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "ServerName $url" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "DocumentRoot $doc_root" >> /Applications/MAMP/conf/apache/vhosts.conf
